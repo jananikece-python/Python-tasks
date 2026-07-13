@@ -169,4 +169,125 @@ print("First element:", first)
 print("Middle element:", middle)
 print("Last element:", last)
 
+#set tasks
+#union,intersection,symmetric,difference
+a={1,2,3,4,5}
+b={3,4,5,6,7}
+print(a.union(b))
+print(a.intersection(b))
+print(a.difference(b))
+print(b.difference(a))
+print(a.symmetric_difference(b))
+print(b.symmetric_difference(a))
+
+#remove duplicates using set
+A={1,2,3,4,5,4,6,5,7}
+
+new_A=list(set(A))
+print("original set:",A)
+print("list after removing duplicates:",new_A)
+
+#subset,superset
+a={1,2,3}
+b={1,2,3,4,5}
+
+print(a.issubset(b))
+print(b.issubset(a))
+
+print(a.issuperset(b))
+print(b.issuperset(a))
+
+#add,remove
+a={10,12,15,19,16,14}
+
+a.add(13)
+print(a)
+a.remove(19)
+print(a)
+
+#find common students using set
+classA = {"Ambreena", "Brindha", "Chitra", "Divya"}
+
+classB = {"Chitra", "Divya", "Elavarasi", "Gayathiri"}
+
+common_students = classA.intersection(classB)
+print("Common students:", common_students)
+
+#disjoint
+set1 = {1, 2, 3, 4}
+set2 = {5, 6, 7, 8}
+
+if set1.isdisjoint(set2):
+    print("The sets are disjoint.")
+else:
+    print("The sets are not disjoint.")
+
+#Dictionary
+#1.dictionary containing student details
+student = {
+    "Name": "Priya",
+    "Age": 20,
+    "Class": "B.Sc Computer Science",
+    "Roll No":26
+}
+
+print(student)
+
+student["Department"]="Computer Science" #2.add a new key-value
+print(student)
+
+student["Age"]=19  #3.update value of existing key
+print(student)
+
+del student["Class"]  #4.delete a key
+print(student)
+
+print(student.keys()) #5.print all keys
+
+print(student.values()) #6.print all values
+
+if "Age" in student:
+    print("key exists")
+else:
+    print("key does not exist") #7.to find whether a key exist
+
+#8.count the frequency
+text = "hello"
+frequency = {}
+
+for ch in text:
+    if ch in frequency:
+        frequency[ch] += 1
+    else:
+        frequency[ch] = 1
+
+print(frequency)
+
+#9.find the student with high mark
+marks = {
+    "Ananya": 85,
+    "Brindha": 92,
+    "Chaiyathra": 78,
+    "Divya": 95
+}
+top_student = max(marks, key=marks.get)
+
+print("Student with the highest mark:", top_student)
+print("Highest mark:", marks[top_student])
+
+#10.merge two dictionaries
+detail_1 = {
+    "Name": "Rithu",
+    "Age": 19
+}
+detail_2 = {
+    "Class": "B.A",
+    "Department": "English"
+}
+
+detail_1.update(detail_2)
+
+print(detail_1)
+
+
 
