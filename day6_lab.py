@@ -289,5 +289,211 @@ detail_1.update(detail_2)
 
 print(detail_1)
 
+#scenario based system
+
+#list
+
+#1.Shopping cart system
+cart = []
+
+cart.append("Milk")
+cart.append("Bread")
+cart.append("Eggs")
+
+print("After adding products:")
+print(cart)
+
+cart.remove("Bread")
+
+print("After removing Bread:")
+print(cart)
+
+#2.Student attendance list
+attendance = ["Arun", "Priya", "Karthik", "Meena", "Rahul"]
+
+student = input("Enter the student name to search: ")
+
+if student in attendance:
+    print(student, "is present.")
+else:
+    print(student, "is absent.")
+
+#tuple
+
+#3.store weekdays on a tuple
+weekdays = ("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"
+
+num = int(input("Enter a number (1-7): "))
+
+if 1 <= num <= 7:
+    print("Day:", weekdays[num - 1])
+else:
+    print("Invalid input! Please enter a number between 1 and 7.")
+
+#4.GPS coordinates
+gps = (13.0827, 80.2707)
+
+print("Latitude:", gps[0])
+print("Longitude:", gps[1])
+
+#set
+
+#5.website visit tracker
+visitors = set()
+
+visitors.add("V101")
+visitors.add("V102")
+visitors.add("V103")
+visitors.add("V101")
+
+print("Unique Visitor IDs:")
+for visitor in visitors:
+    print(visitor)
+
+#6.common courses enrolled
+student1 = {"Python", "Java", "C++", "HTML"}
+student2 = {"Python", "HTML", "JavaScript", "SQL"}
+
+common_courses = student1.intersection(student2)
+
+print("Common Courses:", common_courses)
+
+#dictionary
+
+#7.Employee database
+employees = {
+    101: {"Name": "Arun", "Department": "HR", "Salary": 35000},
+    102: {"Name": "Priya", "Department": "Finance", "Salary": 45000},
+    103: {"Name": "Karthik", "Department": "IT", "Salary": 50000}
+}
+
+for emp_id, details in employees.items():
+    print("Employee ID:", emp_id)
+    print("Name:", details["Name"])
+    print("Department:", details["Department"])
+    print("Salary:", details["Salary"])
+    print()
+
+#8.contact book
+contacts = {
+    "Arun": "98765432xx",
+    "Meena": "98765012xx"
+}
+
+print("Contact Book:")
+for name, phone in contacts.items():
+    print(name, "->", phone)
+
+#9.student mark management
+students = {
+    "Arun": 85,
+    "Priya": 92,
+    "Karthik": 78,
+    "Meena": 88
+}
+print("Student Marks:")
+for name, mark in students.items():
+    print(name, ":", mark)
+
+topper = max(students, key=students.get) #find topper
+print("\nTopper:", topper)
+print("Mark:", students[topper])
+
+students["Karthik"] = 90
+
+print("\nAfter Updating Marks:")  #update marks
+for name, mark in students.items():
+    print(name, ":", mark)
+
+#10.library system
+    library = {
+    101: "Python Programming",
+    102: "Data Structures",
+    103: "Computer Networks",
+    104: "Database Management"
+}
+
+book_id = int(input("Enter Book ID: "))
+
+if book_id in library:
+    print("Book Name:", library[book_id])
+else:
+    print("Book ID not found.")
+
+#Challenge tasks
+    
+#1.convert list-tuple-set-dictionary
+# List
+fruits = ["Apple", "Banana", "Mango", "Orange"]
+
+# List to Tuple
+t = tuple(fruits)
+print("Tuple:", t)
+
+# Tuple to Set
+s = set(t)
+print("Set:", s)
+
+# Set to Dictionary
+d = {}
+for item in s:
+    d[item] = len(item)
+
+print("Dictionary:", d)
+
+#2.duplicate elements in a list using dictionary
+numbers = [10, 20, 30, 20, 40, 10, 50, 20]
+
+count = {}
+
+for num in numbers:
+    count[num] = count.get(num, 0) + 1
+
+print("Duplicate Elements:")
+for key, value in count.items():
+    if value > 1:
+        print(key)
+
+#3.frequency of each word
+sentence = input("Enter a sentence: ")
+
+words = sentence.split()
+frequency = {}
+
+for word in words:
+    frequency[word] = frequency.get(word, 0) + 1
+
+print("Word Frequency:")
+for word, count in frequency.items():
+    print(word, ":", count)
+
+#4.common elements b/w two lists using set
+list1 = [10, 20, 30, 40, 50]
+list2 = [30, 40, 50, 60, 70]
+
+common = set(list1).intersection(set(list2))
+
+print("Common Elements:", common)
+
+#5.student management system using list,tuple,set,dictionary
+students = ["Anu", "Bala", "Charan"]          # List
+subjects = ("Python", "Java", "HTML")         # Tuple
+clubs = {"Sports", "Music", "NSS"}            # Set
+
+marks = {
+    "Anu": 90,
+    "Bala": 85,
+    "Charan": 95
+}                                             # Dictionary
+
+print("Students:", students)
+print("Subjects:", subjects)
+print("Clubs:", clubs)
+
+print("\nStudent Marks:")
+for name, mark in marks.items():
+    print(name, ":", mark)
+
+
 
 
